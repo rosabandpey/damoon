@@ -1,0 +1,258 @@
+@import url(d:\New folder (4)\Damoon\damoon\assets\font\iransansdn\web-fonts\css\fontiran.css);
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* common */
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  direction: rtl;
+  text-align: right !important;
+  font-family: 'IRANSans' !important;
+  text-decoration: none !important;
+}
+
+.container {
+  max-width: 1320px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h1, h2, h3, h4, h5, h6, p, figure, ul, blockquote {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none !important;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+button, input, textarea, label {
+  font-family: inherit;
+}
+
+.dir_ltr {
+  direction: ltr;
+}
+
+.dir_rtl {
+  direction: rtl;
+}
+
+.btn {
+  height: 36px;
+  border: none;
+  font-size: 18px;
+  padding: 0 12px;
+  cursor: pointer;
+  text-align: center;
+  border-radius: 5px;
+  background: #ffffff;
+}
+
+a.btn {
+  line-height: 36px;
+  display: inline-block;
+}
+
+.btn.btn_sm {
+  height: 20px;
+  font-size: 12px;
+  line-height: 20px;
+}
+
+.btn.btn_lg {
+  height: 50px;
+  font-size: 25px;
+  line-height: 50px;
+  border-radius: 7px;
+}
+
+.btn.btn_xl {
+  height: 70px;
+  font-size: 21px;
+  line-height: 70px;
+  font-weight: 500;
+  border-radius: 8px;
+}
+
+.btn.btn_pill {
+  border-radius: 100px;
+}
+
+.btn_gray {
+  color: #000000;
+  background-color: #DEDEDE !important;
+}
+
+.btn_info {
+  color: #ffffff;
+  background-color: #2673F3 !important;
+}
+
+.btn_success {
+  color: #ffffff;
+  background-color: #23C197 !important;
+}
+
+.btn_danger {
+  color: #ffffff;
+  background-color: #F32656 !important;
+}
+
+.btn.btn_pill {
+  border-radius: 100px;
+}
+
+.main_title {
+  font-size: 36px;
+  line-height: 61px;
+  font-weight: 500;
+  margin-bottom: 16px;
+  color: #000000;
+}
+
+.section_title {
+  font-size: 32px;
+  line-height: 55px;
+  font-weight: 500;
+  margin-bottom: 16px;
+  color: #000000;
+  text-align: center;
+}
+
+.section_subtitle {
+  font-size: 22px;
+  line-height: 37px;
+  font-weight: 500;
+  color: #000000;
+}
+
+.section_desc {
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 400;
+  color: #000000;
+}
+
+.text_info {
+  color: #2673F3 !important;
+}
+
+.text_danger {
+  color: #F32656 !important;
+}
+
+.text_success {
+  color: #23C197 !important;
+}
+
+/* ======================= responsive ==================== */
+@media (max-width: 1400px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (max-width: 992px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    max-width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .main_section > .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .main_section {
+    padding-top: 0;
+  }
+}
+
+.staff_card_container {
+  height: 320px;
+}
+
+div.row {
+  width: 80%;
+  margin: 4px auto;
+  background: whitesmoke;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 1rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 8px;
+}
+
+div.row.head > span {
+  font-weight: 700;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+div.row > span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+div.row > span > img {
+  width: 70px;
+  margin-left: 8px;
+}
+
+p {
+  text-align: justify !important;
+}
+/*# sourceMappingURL=Main.css.map */

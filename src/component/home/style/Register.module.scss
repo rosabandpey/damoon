@@ -1,0 +1,301 @@
+$imgPath: '../../images';
+$color-dark-blue: #7ec7f2;
+$color-light-blue: #cee5ed;
+$border-radius-30: 30px !important;
+
+@font-face {
+  font-family: myFirstFont;
+
+  src: url('../../../public/font/FontsFree-Net-ir_sans.ttf');
+}
+
+@mixin displayFlex-row-center {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin displayFlex-coloum-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin displayFlex-row-spaceBetween {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.topSidebarImg {
+  height: 60%;
+  width: 60%;
+}
+
+.bottomSidebarImg {
+  height: 170px;
+}
+
+.bottomSidebarImgCompleteReg {
+  height: 265px;
+  width: 205px;
+  margin-right: -25px;
+  margin-bottom: -15px;
+}
+
+.stepper {
+  @include displayFlex-row-center;
+}
+
+.rightSideGrid {
+  border-radius: $border-radius-30;
+  height: 100%;
+}
+
+.rightSideGridBox {
+  border-radius: $border-radius-30;
+  padding: 24px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: unset;
+  position: relative;
+}
+
+.leftSideGrid {
+  height: 100%;
+}
+
+.leftSideGridBox {
+  padding: 30px;
+  border-radius: $border-radius-30;
+  height: 100%;
+  position: relative;
+}
+
+.leftSideGridForm {
+  height: 100%;
+}
+
+.input {
+  width: 48% !important;
+  height: 45px;
+  font-family: "IRANSans";
+}
+
+.radioButton {
+  width: 90% !important;
+  height: 45px;
+}
+
+.select {
+  width: 48% !important;
+  height: 40px;
+}
+.selectBranch{
+  width: 43% !important;
+  height: 40px;
+}
+.gridInsideContainer {
+  height: 100%;
+}
+.gridContainer {
+  background-image: linear-gradient(
+    to bottom,
+    $color-light-blue,
+    $color-dark-blue
+  );
+  height: 100vh;
+}
+
+.sidebarImgBox {
+  @include displayFlex-row-center;
+  top: 40px;
+  right: 5px;
+  position: absolute;
+}
+
+.sidebarImgBoxBottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  align-items: center;
+  top: 460px;
+  right: 0%;
+  position: absolute;
+  bottom: 0;
+  height: 45%;
+  width: 100%;
+}
+
+.sidebarHeader {
+  margin-top: 40px;
+}
+
+.sidebarStteper {
+  top: 225px;
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  align-items: center;
+  position: absolute;
+}
+
+.checkbox {
+  font-size: 10px !important;
+  width: 100%;
+  margin-top: 10px;
+  padding-right: 76px;
+}
+
+.formButton {
+  // width: 15% !important;
+  text-align: center;
+  border-radius: $border-radius-30;
+}
+
+.formButtonBox {
+  position: absolute;
+  margin-top: -25px !important;
+  margin-right: 465px;
+}
+
+.formInsideGrid {
+  padding-right: 20px;
+  box-shadow: none !important;
+  height: 100%;
+  @include displayFlex-coloum-center;
+}
+
+.formGrid {
+  border-radius: 20px !important;
+  box-shadow: none !important;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.HeaderTitle {
+  margin-top: -20px;
+}
+
+.HeaderTitleh1 {
+  color: #0069b4;
+  font-size: 25px !important;
+  font-weight: bold;
+}
+
+.HeaderTitleh4 {
+  padding-bottom: 30px;
+  margin-top: 10px !important;
+  font-size: 20px !important;
+  color: #3f4756;
+}
+
+.boxDiv {
+  @include displayFlex-row-spaceBetween;
+ 
+  width: 80%;
+  top: 215px;
+  position: absolute;
+}
+.boxDivBranchProvince{
+  @include displayFlex-row-spaceBetween;
+  
+  width: 80%;
+  top: 310px;
+  position: absolute;
+}
+
+.boxDivEmployee {
+  @include displayFlex-row-spaceBetween;
+  width: 80%;
+}
+
+.boxDivLegal {
+  @include displayFlex-row-spaceBetween;
+  width: 80%;
+  top: 500px;
+  position: absolute;
+}
+
+.branchBoxDiv {
+  @include displayFlex-row-spaceBetween;
+ 
+ 
+  width: 90%;
+  top: 405px;
+  right: 3px;
+  position: absolute;
+}
+
+.buttonIconTooltip {
+  right: 5px !important;
+  top: 25px !important;
+}
+
+.boxCheckBoxes {
+  margin-right: 30px;
+  top: 500px;
+    position: absolute;
+}
+
+.boxDivName {
+  @include displayFlex-row-spaceBetween;
+
+  width: 80%;
+  top: 120px;
+  position: absolute;
+}
+
+.boxDivGender{
+    @include displayFlex-row-spaceBetween;
+
+    width: 80%;
+    top: 320px;
+    position: absolute;
+
+}
+.boxDivCompanyNumber {
+  @include displayFlex-row-center;
+  width: 80%;
+  top: 595px;
+    position: absolute;
+    right: -70px;
+}
+
+.boxDivRadioButton {
+  @include displayFlex-row-center;
+  width: 87%;
+  margin-top: 10px;
+}
+
+.tooltipIcon {
+  height: 25px !important;
+  width: 25px !important;
+}
+
+.BoxprogressBar {
+  @include displayFlex-row-spaceBetween;
+
+  height: 7%;
+  background-color: white;
+  border-radius: 20px;
+  margin-bottom: 15px;
+  padding: 15px;
+}
+
+.progressBar {
+  width: 80%;
+}
+
+.completeButton {
+  // background-color: rgb(165, 164, 164) !important;
+  width: 15% !important;
+  border-radius: 20px !important;
+}

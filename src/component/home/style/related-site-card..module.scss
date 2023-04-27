@@ -1,0 +1,26 @@
+.related_site_card {
+    display: flex;
+    min-width: 170px;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+    .site_banner {
+        margin-bottom: 16px;
+        img {
+            width: 100%;
+            max-width: 200px;
+            height: 120px;
+        }
+    }
+    .section_title {
+        font-size: 32px;
+        line-height: 55px;
+        text-align: center;
+      }
+    .site_title {
+        font-size: 15px;
+        line-height: 26px;
+        font-weight: 500;
+        color: #000000;
+    }
+}

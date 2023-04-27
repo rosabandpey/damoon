@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,eAAe,CAAC;EACZ,OAAO,EAAE,MAAM;CASlB;;AAVD,AAEI,eAFW,CAEX,iBAAiB,CAAC;EACd,MAAM,EAAE,MAAM;EACd,SAAS,EAAE,KAAK;CACnB;;AALL,AAMI,eANW,CAMX,iBAAiB,CAAC;EACd,OAAO,EAAE,KAAK;EACd,UAAU,EAAE,MAAM;CACrB",
+    "sources": [
+        "video-tutorial.module.scss"
+    ],
+    "names": [],
+    "file": "video-tutorial.module.css"
+}

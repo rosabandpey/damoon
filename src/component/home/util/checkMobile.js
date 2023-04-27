@@ -1,0 +1,1 @@
+export  const  checkMobile= /^(0)9\d{9}$/

@@ -1,0 +1,459 @@
+@font-face {
+  font-family: myFirstFont;
+  src: url("../../../public/font/FontsFree-Net-ir_sans.ttf");
+}
+
+.topSidebarImg {
+  height: 60%;
+  width: 60%;
+}
+
+.bottomSidebarImg {
+  height: 170px;
+}
+
+.bottomSidebarImgCompleteReg {
+  height: 265px;
+  width: 205px;
+  margin-right: -25px;
+  margin-bottom: -15px;
+}
+
+.stepper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.rightSideGrid {
+  border-radius: 30px !important;
+  height: 100%;
+}
+
+.rightSideGridBox {
+  border-radius: 30px !important;
+  padding: 24px;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: unset;
+      -ms-flex-pack: unset;
+          justify-content: unset;
+  position: relative;
+}
+
+.leftSideGrid {
+  height: 100%;
+}
+
+.leftSideGridBox {
+  padding: 30px;
+  border-radius: 30px !important;
+  height: 100%;
+  position: relative;
+}
+
+.leftSideGridForm {
+  height: 100%;
+}
+
+.input {
+  width: 48% !important;
+  height: 45px;
+  font-family: "IRANSans";
+}
+
+.radioButton {
+  width: 90% !important;
+  height: 45px;
+}
+
+.select {
+  width: 48% !important;
+  height: 40px;
+}
+
+.selectBranch {
+  width: 43% !important;
+  height: 40px;
+}
+
+.gridInsideContainer {
+  height: 100%;
+}
+
+.gridContainer {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#cee5ed), to(#7ec7f2));
+  background-image: linear-gradient(to bottom, #cee5ed, #7ec7f2);
+  height: 100vh;
+}
+
+.sidebarImgBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  top: 40px;
+  right: 5px;
+  position: absolute;
+}
+
+.sidebarImgBoxBottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  top: 460px;
+  right: 0%;
+  position: absolute;
+  bottom: 0;
+  height: 45%;
+  width: 100%;
+}
+
+.sidebarHeader {
+  margin-top: 40px;
+}
+
+.sidebarStteper {
+  top: 225px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+}
+
+.checkbox {
+  font-size: 10px !important;
+  width: 100%;
+  margin-top: 10px;
+  padding-right: 76px;
+}
+
+.formButton {
+  text-align: center;
+  border-radius: 30px !important;
+}
+
+.formButtonBox {
+  position: absolute;
+  margin-top: -25px !important;
+  margin-right: 465px;
+}
+
+.formInsideGrid {
+  padding-right: 20px;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.formGrid {
+  border-radius: 20px !important;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.HeaderTitle {
+  margin-top: -20px;
+}
+
+.HeaderTitleh1 {
+  color: #0069b4;
+  font-size: 25px !important;
+  font-weight: bold;
+}
+
+.HeaderTitleh4 {
+  padding-bottom: 30px;
+  margin-top: 10px !important;
+  font-size: 20px !important;
+  color: #3f4756;
+}
+
+.boxDiv {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 80%;
+  top: 215px;
+  position: absolute;
+}
+
+.boxDivBranchProvince {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 80%;
+  top: 310px;
+  position: absolute;
+}
+
+.boxDivEmployee {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 80%;
+}
+
+.boxDivLegal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 80%;
+  top: 500px;
+  position: absolute;
+}
+
+.branchBoxDiv {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 90%;
+  top: 405px;
+  right: 3px;
+  position: absolute;
+}
+
+.buttonIconTooltip {
+  right: 5px !important;
+  top: 25px !important;
+}
+
+.boxCheckBoxes {
+  margin-right: 30px;
+  top: 500px;
+  position: absolute;
+}
+
+.boxDivName {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 80%;
+  top: 120px;
+  position: absolute;
+}
+
+.boxDivGender {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 80%;
+  top: 320px;
+  position: absolute;
+}
+
+.boxDivCompanyNumber {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 80%;
+  top: 595px;
+  position: absolute;
+  right: -70px;
+}
+
+.boxDivRadioButton {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 87%;
+  margin-top: 10px;
+}
+
+.tooltipIcon {
+  height: 25px !important;
+  width: 25px !important;
+}
+
+.BoxprogressBar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 7%;
+  background-color: white;
+  border-radius: 20px;
+  margin-bottom: 15px;
+  padding: 15px;
+}
+
+.progressBar {
+  width: 80%;
+}
+
+.completeButton {
+  width: 15% !important;
+  border-radius: 20px !important;
+}
+/*# sourceMappingURL=Register.module.css.map */

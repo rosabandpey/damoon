@@ -1,0 +1,38 @@
+.related_site_card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-width: 170px;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.related_site_card .site_banner {
+  margin-bottom: 16px;
+}
+
+.related_site_card .site_banner img {
+  width: 100%;
+  max-width: 200px;
+  height: 120px;
+}
+
+.related_site_card .section_title {
+  font-size: 32px;
+  line-height: 55px;
+  text-align: center;
+}
+
+.related_site_card .site_title {
+  font-size: 15px;
+  line-height: 26px;
+  font-weight: 500;
+  color: #000000;
+}
+/*# sourceMappingURL=related-site-card..module.css.map */

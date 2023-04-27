@@ -1,0 +1,177 @@
+.slider_card_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 auto;
+  max-width: 70%;
+  position: relative;
+  color: #000000;
+}
+
+.slider_card_container .card_banner {
+  margin: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.slider_card_container .card_banner img {
+  width: 100%;
+  height: 100%;
+  max-width: 285px;
+  border-radius: 20px;
+}
+
+.slider_card_container .card_banner .cardImg {
+  max-width: 485px;
+  width: 100%;
+  height: 100%;
+}
+
+.slider_card_container .btn_danger {
+  color: #fff;
+  background-color: #Ff2e17 !important;
+}
+
+.slider_card_container .btn.btn_pill {
+  border-radius: 100px;
+}
+
+.slider_card_container .btn.btn_sm {
+  height: 20px;
+  font-size: 12px;
+  line-height: 20px;
+}
+
+.slider_card_container .btn {
+  height: 36px;
+  border: none;
+  font-size: 18px;
+  padding: 0 12px;
+  cursor: pointer;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.slider_card_container .card_title {
+  font-size: 20px;
+  line-height: 43px;
+  font-weight: 500;
+  margin-top: 12px;
+  margin-bottom: 8px;
+  position: absolute;
+}
+
+.slider_card_container .card_text {
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: normal;
+  margin-bottom: 12px;
+  position: absolute;
+}
+
+.slider_card_container .card_description {
+  font-size: 10px;
+  line-height: 24px;
+  font-weight: normal;
+  margin-bottom: 12px;
+  color: #494646 !important;
+  width: 150px;
+  font-family: "IRANSans";
+  position: absolute;
+}
+
+.slider_card_container .card_button {
+  font-family: "IRANSans" !important;
+  position: absolute;
+}
+
+.slider_card_container .card_heading {
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: bold;
+  margin-bottom: 12px;
+  color: #494646 !important;
+  width: 155px;
+  font-family: "IRANSans";
+}
+
+.slider_card_container .card_actions {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+}
+
+.slider_card_container .card_actions .btn {
+  margin-left: 10px;
+}
+
+.programs_content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.programs_title {
+  font-size: 20px;
+  line-height: 43px;
+  font-weight: 500;
+  margin: auto;
+  width: 60%;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.card {
+  margin-bottom: 20px;
+  border: 1px #2b2828;
+  border-radius: 20px;
+}
+
+@media (max-width: 992px) {
+  .slider_card_container .card_banner {
+    margin-left: 20px;
+  }
+  .slider_card_container .card_banner img {
+    max-width: 250px;
+  }
+}
+
+@media (max-width: 768px) {
+  .slider_card_container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .slider_card_container .card_banner {
+    margin: 0 auto;
+  }
+  .slider_card_container .card_content .card_text {
+    max-height: 290px;
+    overflow: hidden;
+  }
+}
+/*# sourceMappingURL=slide-card.module.css.map */

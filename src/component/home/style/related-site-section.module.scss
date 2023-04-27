@@ -1,0 +1,19 @@
+.related_site_section {
+    padding: 100px 0;
+    .section_title {
+        margin-bottom: 30px;
+        font-size: 32px;
+        line-height: 55px;
+        text-align: center;
+    }
+    
+    .related_site_list {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        align-items: center;
+        // gap: 40px 0;
+        // grid-gap: 40px 0;
+        // grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+    }
+}

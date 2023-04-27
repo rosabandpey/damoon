@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,kBAAkB,CAAC;EACf,WAAW,EAAE,IAAI;EACjB,cAAc,EAAE,IAAI;CAqBvB;;AAvBD,AAGI,kBAHc,CAGd,aAAa,CAAC;EACV,SAAS,EAAE,KAAK;EAChB,MAAM,EAAE,MAAM;EACd,SAAS,EAAE,IAAI;EACf,WAAW,EAAE,IAAI;EACjB,WAAW,EAAE,GAAG;EAChB,KAAK,EAAE,IAAI;CAEd;;AAXL,AAaI,kBAbc,CAad,cAAc,CAAC;EACX,SAAS,EAAE,IAAI;EACf,WAAW,EAAE,IAAI;EACjB,UAAU,EAAE,MAAM;EAClB,WAAW,EAAE,GAAG;EAChB,aAAa,EAAE,IAAI;EACnB,KAAK,EAAE,IAAI;CACZ",
+    "sources": [
+        "why-atieh-section.module.scss"
+    ],
+    "names": [],
+    "file": "why-atieh-section.module.css"
+}

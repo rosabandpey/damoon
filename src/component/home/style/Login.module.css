@@ -1,0 +1,38 @@
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 20px !important;
+  border-radius: 30px;
+  width: 25%;
+  height: 450px;
+  margin: auto;
+  background-color: #EFEFEF;
+  padding: 30px;
+}
+
+.formButton {
+  margin: 10px;
+  text-align: center;
+  width: 40%;
+}
+
+.aButton {
+  color: #717886;
+}
+
+.cardImg {
+  height: 20%;
+  width: 25%;
+}
+/*# sourceMappingURL=Login.module.css.map */

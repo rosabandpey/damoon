@@ -1,0 +1,109 @@
+$grayColor: #DEDEDE;
+$infoColor: #2673F3;
+$dangerColor: #F32656;
+$successColor: #23C197;
+
+
+.main_section {
+    padding-top: 60px;
+    padding-bottom: 120px;
+    > .container {
+        display: flex;
+        align-items: center;
+        max-width: 1320px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .section_content {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        .main_title {
+            font-size: 60px;
+            font-weight: bold;
+            line-height: 87px;
+            margin-bottom: 32px;
+        }
+        .btn {
+            min-width: 270px;
+            
+                height: 36px;
+                border: none;
+                font-size: 18px;
+                padding: 0 12px;
+                cursor: pointer;
+                text-align: center;
+                border-radius: 5px;
+                background: #fff;
+                  background-color: rgb(255, 255, 255);
+              
+        }
+        .btn.btn_pill {
+            border-radius: 100px;
+          }
+        .btn_info {
+            margin-bottom: 18px;
+           
+  color: #fff;
+  background-color: #2673f3 !important;
+}
+.btn_success {
+    color: #fff;
+    background-color: #23c197 !important;
+  }
+        .btn_lg
+        {
+            height: 50px;
+font-size: 25px;
+line-height: 50px;
+border-radius: 7px;
+        }
+
+    }
+    .section_banner {
+        flex: 1;
+        img {
+            max-width: 730px;
+        }
+    }
+}
+
+.text_info {
+    color: $infoColor !important;
+}
+
+@media(max-width: 1200px) {
+    .main_section .section_banner img {
+        max-width: 500px;
+    }
+}
+@media(max-width: 992px) {
+    .main_section .section_banner img {
+        max-width: 350px;
+    }
+}
+@media(max-width: 768px) {
+    .main_section > .container {
+        flex-direction: column;
+    }
+    .main_section .section_banner img {
+        width: 100%;
+        max-width: 400px;
+        margin-top: 30px;
+    }
+}
+@media(max-width: 576px) {
+    .main_section .section_content .main_title {
+        font-size: 40px;
+        line-height: 60px;
+        margin-bottom: 20px;
+    }
+    .main_section .section_content .btn {
+        width: 250px;
+        max-width: 100%;
+        min-width: unset;
+        font-size: 20px;
+    }
+}
