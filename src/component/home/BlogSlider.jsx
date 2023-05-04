@@ -20,7 +20,12 @@ export default function BlogSlider({ slideData }) {
     >
       {(slideData || []).map((item, index) => (
         <Carousel.Item key={index}>
-          <Image src={item.src} alt={item.alt} className="d-block w-100" />
+          <img
+            src={`http://84.241.11.4:1080/uploads/programs/${item.imgurl}`}
+            alt={item.title}
+            className="d-block w-100"
+            style={{height:'600px'}}
+          />
 
           <Carousel.Caption>
             <div className={styles.flexRow}>
@@ -29,7 +34,7 @@ export default function BlogSlider({ slideData }) {
                 <label>(تاریخ)</label>
               </div>
               <div>
-                <Button type="submit" class="btn btn-danger">
+                <Button type="submit" className="btn btn-danger">
                   ثبت نام
                 </Button>
               </div>
@@ -39,16 +44,20 @@ export default function BlogSlider({ slideData }) {
             <p className={styles.des}>{item.description}</p>
             <div className={styles.propRow}>
               <div>
-                <label>*****</label>
+                <label>درجه سختی: {item.degree} از 10</label>
               </div>
               <div>
-                <label>1.500 $</label>
+                <label>هزینه برنامه: {item.price}  تومان</label>
               </div>
               <div>
-                <label>40 Km</label>
+                <label> طول مسیر: {item.distance} کیلومتر</label>
               </div>
               <div>
-                <label>Camp</label>
+              <label> اقامت:{item.camptype}</label>
+                {/* <Image
+                  src={require(`../../../assets/img/camptype-${item.camptype}.png`)}
+                  className="d-block w-100"
+                /> */}
               </div>
             </div>
           </Carousel.Caption>

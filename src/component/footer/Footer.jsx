@@ -61,7 +61,7 @@ export default function Footer(props) {
                     <ul className={styles.social_icons}>
                         <li>
                             <a className={[styles.social_link , styles.facebook].join(' ') } href="https://www.instagram.com/damoonbikers/">
-                            <span id="boot-icon" class="bi bi-instagram" style={{fontSize:'10rem'}}></span>
+                            <span id="boot-icon" className="bi bi-instagram" style={{fontSize:'10rem'}}></span>
                             </a>
                         </li>
                         <li>
