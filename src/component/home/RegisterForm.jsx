@@ -1,16 +1,21 @@
-import { Card, Col, Form, Row } from "reactstrap";
+import { Button, Card, Col, Form, Row } from "reactstrap";
 import React, { useState } from "react";
-import Controls from "../controls/Control";
-import { GENDER } from "./constant/Gender";
-import styles from "./style/Register.module.css";
+
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
-import { BlOOD_GROUP } from "./constant/BloodGroup";
 import { checkNationalCode } from "./util/checkNationalCode";
 import { checkMobile } from "./util/checkMobile";
+import { GENDER } from "./constant/Gender";
+import { BlOOD_GROUP } from "./constant/BloodGroup";
+import Select from "../controls/Select";
+import Input from "../controls/Input";
 
-export default function RegisterForm({ handleClose }) {
+
+
+
+export default function RegisterForm(props) {
+
   const [alert, setAlert] = useState(false);
   const [checkAlert, setCheckAlert] = useState(false);
   const [labelAlert, setLabelAlert] = useState("");
@@ -45,13 +50,13 @@ export default function RegisterForm({ handleClose }) {
   const formHandleSubmit = (data) => {
     console.log(data);
 
-    setSeverity("success");
-    setAlert(true);
-    setLabelAlert("عملیات با موفقیت انجام شد");
-    setCheckAlert((prev) => !prev);
-    setTimeout(() => {
-      handleClose();
-    }, 3000);
+    // setSeverity("success");
+    // setAlert(true);
+    // setLabelAlert("عملیات با موفقیت انجام شد");
+    // setCheckAlert((prev) => !prev);
+    // setTimeout(() => {
+    //   handleClose();
+    // }, 3000);
   };
 
   const inputListGeneratorArray = [
@@ -90,6 +95,8 @@ export default function RegisterForm({ handleClose }) {
     { title: "گروه خونی", options: BlOOD_GROUP, name: "bloodGroup" },
   ];
 
+
+  
   console.log("errors", errors);
 
   return (
@@ -102,7 +109,7 @@ export default function RegisterForm({ handleClose }) {
                 return (
                   <>
                     <Row item xs={6}>
-                      <Controls.Input
+                      <Input
                         control={control}
                         label={itm.title}
                         name={itm.name}
@@ -117,7 +124,7 @@ export default function RegisterForm({ handleClose }) {
                 return (
                   <>
                     <Row item xs={6}>
-                      <Controls.Select
+                      <Select
                         options={itm.options}
                         name={itm.name}
                         label={itm.title}
