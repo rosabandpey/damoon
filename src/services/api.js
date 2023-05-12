@@ -9,6 +9,15 @@ const request = axios.create({
 export const getNewPrograms = () =>
   request.get("/Programs/GetNews", { crossdomain: true }, );
 
+  export const getLastProgramsService = (ProgramType) =>
+request.get("/Programs/GetLast", {
+  params: {
+    ProgramType
+  },
+}, { crossdomain: true },);
+
+
+
 export const getListCityService = (provinceId) =>
   request.get(`/CitiesList/${provinceId}`);
 
