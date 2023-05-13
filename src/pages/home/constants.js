@@ -1,11 +1,11 @@
 import abasabad from "../../../assets/img/asbasabad.jpeg";
 import miankale from "../../../assets/img/miankale.jpg";
 import yazd from "../../../assets/img/yazd.jpg";
-import geer from '../../../assets/img/geer.jpg'
+import geer from "../../../assets/img/geer.jpg";
 import gheshm from "../../../assets/img/gheshm.jpeg";
-import watch from '../../../assets/img/watch.jpg'
-import taft from '../../../assets/img/taft.jpg'
-import hamegani from '../../../assets/img/hamegani.jpg'
+import watch from "../../../assets/img/watch.jpg";
+import taft from "../../../assets/img/taft.jpg";
+import hamegani from "../../../assets/img/hamegani.jpg";
 import introBanner from "../../../assets/img/banner-2.png";
 import relSiteLogo1 from "../../../assets/img/otherWebsites/Codal.png";
 import relSiteLogo2 from "../../../assets/img/otherWebsites/fanavari.png";
@@ -22,20 +22,18 @@ export const sample = [
     // imgurl: `uploads/programs/${imgurl}`,
     src: abasabad,
     alt: "سفر کلاردشت به رامسر",
-    
+
     price: 1500000,
-    degree:1,
+    degree: 1,
     enddateday: 29,
     enddatemonth: 2,
     enddateyear: 1402,
     startdateday: 26,
     startdatemonth: 2,
     startdateyear: 1402,
-    camptype:1,
-    distance:1000,
-    
+    camptype: 1,
+    distance: 1000,
   },
-
 
   {
     title: "سفر میانکاله ",
@@ -43,39 +41,30 @@ export const sample = [
     src: miankale,
     alt: "سفر میانکاله ",
     price: 1800000,
-    degree:1,
+    degree: 1,
     enddateday: 29,
     enddatemonth: 2,
     enddateyear: 1402,
     startdateday: 26,
     startdatemonth: 2,
     startdateyear: 1402,
-    camptype:1,
-    distance:1000,
-    
+    camptype: 1,
+    distance: 1000,
   },
 ];
 
 export const lastPrograms = [
   {
     title: "سفر یزد ",
-
-    src: yazd,
-
-    link: "#",
-    description:"این سفر در اسفند ماه 1401 برگزار شد"
+    
+    description: "این سفر در اسفند ماه 1401 برگزار شد",
   },
   {
     title: "سفر قشم ",
 
-    src: gheshm,
-
-    link: "#",
-    description:"این سفر در بهمن ماه 1401 برگزار شد"
+    description: "این سفر در بهمن ماه 1401 برگزار شد",
   },
 ];
-
-
 
 export const educationalContents = [
   {
@@ -84,7 +73,7 @@ export const educationalContents = [
     src: geer,
 
     link: "#",
-    description:"آموزش نحوه و زمان تعویض دنده دوچرخه"
+    description: "آموزش نحوه و زمان تعویض دنده دوچرخه",
   },
   {
     title: "شستشوی دوچرخه",
@@ -92,10 +81,9 @@ export const educationalContents = [
     src: watch,
 
     link: "#",
-    description:"نکاتی در مورد نظافت دوچرخه"
+    description: "نکاتی در مورد نظافت دوچرخه",
   },
 ];
-
 
 export const weblogContents = [
   {
@@ -104,7 +92,7 @@ export const weblogContents = [
     src: taft,
 
     link: "#",
-    description:"جاده سلامت یزد – تفت افتتاح شد"
+    description: "جاده سلامت یزد – تفت افتتاح شد",
   },
   {
     title: "رکاب زنی همگانی شهر تهران",
@@ -112,12 +100,9 @@ export const weblogContents = [
     src: hamegani,
 
     link: "#",
-    description:"رکاب‌زنی در شلوغی پایتخت"
+    description: "رکاب‌زنی در شلوغی پایتخت",
   },
 ];
-
-
-
 
 export const introSectionData = {
   title: {

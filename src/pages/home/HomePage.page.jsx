@@ -8,14 +8,34 @@ import styles from './HomePage.module.scss'
 
 import BlogSlider from "@/component/home/BlogSlider";
 import Login from "../../component/home/Login";
+import LastPrograms from "@/component/card/LastPrograms";
+import { useEffect, useState } from "react";
+import { getLastProgramsService } from "@/services/api";
 
 
 
 
 
 
-export default function HomePage({slideData,programs}) {
 
+export default function HomePage({slideData}) {
+
+
+  const [lastUrbanPrograms, setLastUrbanPrograms] = useState([]);
+  const [loading,isLoading]=useState(false)
+
+  const getLastProgramData = () => {
+    getLastProgramsService(2).then((res) => {
+      console.log(res.data);
+      setLastUrbanPrograms([res.data]);
+      isLoading(true)
+    });
+  };
+
+  useEffect(() => {
+   
+    getLastProgramData();
+  }, []);
 
   return (
     <>
@@ -28,6 +48,11 @@ export default function HomePage({slideData,programs}) {
      
       <BlogSlider title="سفرهای پیش رو" slideData={slideData} />
      
+{
+  loading &&
+  <LastPrograms lastPrograms={lastUrbanPrograms}  />
+}
+    
       </div>
       <Login />
 {/* <div className={styles.row}>

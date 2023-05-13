@@ -1,67 +1,27 @@
 import HomePage from "./home/HomePage.page";
-import {
-  sample,
-  introSectionData,
-  relatedSiteData,
-  lastPrograms,
-} from "../pages/home/constants";
-import { useEffect, useState } from "react";
-import { getNewPrograms } from "@/services/api";
 
-export default function Home({
-  sliderData,
-  introSectionData,
-  relatedSiteData,
-  programs,
-}) {
+import { getLastProgramsService, getNewPrograms } from "@/services/api";
+import { useEffect, useState } from "react";
+
+export default function Home() {
+  const [newPrograms, setNewPrograms] = useState([]);
+
+  const fetchNewProgramData = () => {
+    getNewPrograms().then((res) => {
+      setNewPrograms(res.data);
+    });
+  };
+
+  
+
+  useEffect(() => {
+    fetchNewProgramData();
+   
+  }, []);
+
   return (
     <>
-      <HomePage
-        slideData={sliderData}
-        introSectionData={introSectionData}
-        relatedSiteData={relatedSiteData}
-        programs={lastPrograms}
-      />
+      <HomePage slideData={newPrograms}  />
     </>
   );
 }
-
-export const getStaticProps = async () => {
-  // const [newPrograms, setNewPrograms] = useState([]);
-
-
- 
-    let res = await getNewPrograms();
-    console.log(res)
-    
-    const sliderData=res.data
-    // setNewPrograms({ data });
-
-
-
-
-
-  return {
-    props: {
-      programs: lastPrograms,
-      sliderData,
-      introSectionData: introSectionData,
-      relatedSiteData: relatedSiteData,
-    },
-  };
-};
-
-// export async function getStaticProps() {
-//   // Call an external API endpoint to get posts.
-//   // You can use any data fetching library
-//   const res = await fetch("https://.../posts");
-//   const posts = await res.json();
-
-//   // By returning { props: { posts } }, the Blog component
-//   // will receive `posts` as a prop at build time
-//   return {
-//     props: {
-//       posts,
-//     },
-//   };
-// }

@@ -1,44 +1,30 @@
-import { getLastProgramsService } from "@/services/api";
+
 import React, { useEffect, useState } from "react";
 import CardItem from "./CardItem";
+import "bootstrap/dist/css/bootstrap.min.css";
 
-export default function LastPrograms({lastPrograms}) {
-
-//   const [data, setData] = useState([]);
-//   const [loading,isLoading]=useState(false)
-
-//   const getData =  () => {
-//     getLastProgramsService(2).then((res)=>{
-//         console.log(res);
-//         setData(res.data);
-//         isLoading(true)
-//     });
-  
-//   };
-
-//   useEffect(() => {
-//     getData();
-//   }, []);
+export default function LastPrograms(props) {
 
 
+  const data = props?.lastPrograms;
 
-console.log('lastPrograms',lastPrograms  || [])
+console.log('lastPrograms',data  || [])
 
   return (
     <>
-    {
+    {/* {
         
 
-        (lastPrograms || []).map((item) => (
+        (data || []).map((item) => (
             <CardItem
               title={item.title}
-              des={item.description}
+              description={item.description}
               buttonTitle={"مشاهده"}
               imgurl={"Birthday.jpg"}
               className="my-2"
             />
           ))
-    }
+    } */}
     
     </>
   );

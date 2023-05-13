@@ -1,8 +1,9 @@
 import { Button } from "bootstrap";
 import React from "react";
 import { Card, CardBody, CardImg, CardText, CardTitle } from "reactstrap";
+import "bootstrap/dist/css/bootstrap.min.css";
 
-export default function CardItem({ title, des, buttonTitle,imgurl}) {
+export default function CardItem({ title, description, buttonTitle,imgurl}) {
   return (
     <Card>
       <CardImg
@@ -15,7 +16,7 @@ export default function CardItem({ title, des, buttonTitle,imgurl}) {
         <CardTitle tag="h5">{title}</CardTitle>
 
         <CardText>
-         {des}
+         {description}
         </CardText>
         <Button>{buttonTitle}</Button>
       </CardBody>
