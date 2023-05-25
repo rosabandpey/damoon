@@ -5,17 +5,25 @@
   border: none !important;
   align-items: center;
   padding: 15px;
+  margin: 10px;
+border-radius: 20px;
 }
 
 .cardList {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  margin: 20px;
   border: 1px solid #d1cccc;
   border-radius: 30px;
   width: 38%;
-  margin: 20px;
-  padding: 20px;
+  
+  
+  background-color: #f4f1f1;
+}
+
+.divCardItem{
+  // margin: 20px;
+  
 }
 
 .flexColumn {
@@ -44,11 +52,15 @@
 }
 
 .divButton {
-  display: flex;
-  align-items: flex-end;
-  height: 200px;
+ text-align: left;
 }
 
 .title {
   margin-bottom: 10px;
+  text-align: center;
+  padding: 20px;
+}
+
+.link{
+  text-align: center;
 }

@@ -12,7 +12,7 @@ import Login from "../../component/home/Login";
 import { useEffect, useState } from "react";
 import { getLastProgramsService } from "@/services/api";
 import LastPrograms from "@/component/card/LastPrograms";
-
+import convertDate from '../../util/common'
 
 
 
@@ -23,22 +23,32 @@ export default function HomePage({slideData}) {
 
 
   const [lastUrbanPrograms, setLastUrbanPrograms] = useState([]);
+  const [lastTripPrograms, setLastTripPrograms] = useState([]);
   const [loading,isLoading]=useState(false)
 
-  const getLastProgramData = () => {
-    getLastProgramsService(2).then((res) => {
+  const getLastProgramDataCity = () => {
+    getLastProgramsService(1).then((res) => {
      
       setLastUrbanPrograms(res.data);
       isLoading(true)
     });
   };
 
+  const getLastProgramDataTrip = () => {
+    getLastProgramsService(2).then((res) => {
+     
+      setLastTripPrograms(res.data);
+      isLoading(true)
+    });
+  };
+
   useEffect(() => {
    
-    getLastProgramData();
+    getLastProgramDataCity();
+    getLastProgramDataTrip();
   }, []);
 
-  console.log('tt',lastUrbanPrograms);
+
 
   return (
     <>
@@ -57,9 +67,14 @@ export default function HomePage({slideData}) {
 
       {
   loading &&
-  <LastPrograms lastPrograms={lastUrbanPrograms}  />
+
+  <div className={styles.flexRow}>
+ <LastPrograms lastPrograms={lastUrbanPrograms} title='برنامه های شهری اجرا شده' linkTitle='مشاهده کامل برنامه های شهری'/>
+  <LastPrograms lastPrograms={lastTripPrograms} title='  سفرهای اجرا شده' linkTitle='مشاهده کامل سفرها' />
+ </div>
+ 
 }
-      <Login />
+      {/* <Login /> */}
 {/* <div className={styles.row}>
 
 
