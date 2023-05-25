@@ -15,6 +15,13 @@
 .flexRow{
     display: flex;
     flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.flexColumn{
+    display: flex;
+    flex-direction: column;
     justify-content: space-between;
     width: 100%;
 }

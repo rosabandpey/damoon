@@ -1,0 +1,54 @@
+.flexRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  border: none !important;
+  align-items: center;
+  padding: 15px;
+}
+
+.cardList {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid #d1cccc;
+  border-radius: 30px;
+  width: 38%;
+  margin: 20px;
+  padding: 20px;
+}
+
+.flexColumn {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.divImg {
+  width: 300px;
+  height: 200px;
+}
+
+.img {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+}
+
+.CardBody {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 200px;
+  margin-right: 5px;
+}
+
+.divButton {
+  display: flex;
+  align-items: flex-end;
+  height: 200px;
+}
+
+.title {
+  margin-bottom: 10px;
+}

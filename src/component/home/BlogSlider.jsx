@@ -35,7 +35,7 @@ export default function BlogSlider({ slideData }) {
       {(slideData || []).map((item, index) => (
         <Carousel.Item key={index}>
           <img
-            src={`http://84.241.11.4:1080/uploads/programs/${item.imgurl}`}
+            src={`http://192.168.1.36/uploads/programs/${item.imgUrl}`}
             alt={item.title}
             className="d-block w-100"
             style={{ height: "600px" }}
