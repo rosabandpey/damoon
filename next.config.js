@@ -18,3 +18,7 @@ module.exports = {
 module.exports = {
   pageExtensions: ['page.tsx', 'page.ts', 'page.jsx', 'page.js']
 }
+
+module.exports = {
+  distDir: 'build',
+};

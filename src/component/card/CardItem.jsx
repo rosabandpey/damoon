@@ -18,6 +18,10 @@ export default function CardItem({ title, description, imgUrl, buttonTitle ,date
     <>
       <Card className={styles.flexRow}>
         <div className={styles.divImg}>
+          <Image alt={title}
+            src={imgUrl}
+            top
+            className={styles.img}/>
           <CardImg
             alt={title}
             src={imgUrl}
