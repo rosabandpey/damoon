@@ -11,8 +11,8 @@ export default function Program() {
     
 //   }, []);
 
-const router=useRouter()
-console.log(router)
+// const router=useRouter()
+// console.log(router)
   return (
     // <NewProgramsDetail />
     <div>test</div>

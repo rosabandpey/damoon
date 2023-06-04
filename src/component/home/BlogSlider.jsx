@@ -35,8 +35,8 @@ export default function BlogSlider({ slideData }) {
     // router.push('/program');
 
     router.push({
-      pathname: '/program/[pid]',
-      query: { pid: id },
+      pathname: '/program/[id]',
+      query: { id: id },
     });
    
   }
