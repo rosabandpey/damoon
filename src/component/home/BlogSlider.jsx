@@ -4,10 +4,11 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Image from "next/image";
 import styles from "../../component/home/style/blog-slider.module.scss";
 import { Button } from "reactstrap";
-import { CAMP_TYPE } from "./constant/CampType";
+
 import { PROGRAM_TYPE } from "./constant/ProgramType";
 import { getProgramsServiceById } from "@/services/api";
 import { useRouter } from "next/router";
+import { chooseCapmType, dateFunc, IMG_URL } from "@/constant";
 
 export default function BlogSlider({ slideData }) {
   const [index, setIndex] = useState(0);
@@ -17,17 +18,13 @@ export default function BlogSlider({ slideData }) {
     setIndex(selectedIndex);
   };
 
-  const chooseCapmType = (id) => {
-    return CAMP_TYPE[id];
-  };
+ 
 
   const chooseProgramType = (id) => {
     return PROGRAM_TYPE[id];
   };
 
-  const dateFunc = (year, month, day) => {
-    return `${year}/${month}/${day}`;
-  };
+ 
 
   
   const handleViewProgram=(id)=>{
@@ -54,7 +51,7 @@ export default function BlogSlider({ slideData }) {
       {(slideData || []).map((item, index) => (
         <Carousel.Item key={index}>
           <img
-            src={`http://84.241.11.4/uploads/programs/${item.imgUrl}`}
+            src={`${IMG_URL}/${item.imgUrl}`}
             alt={item.title}
             className="d-block w-100"
             style={{ height: "600px" }}

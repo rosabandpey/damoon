@@ -1,63 +1,87 @@
-import NewProgramsDetail from "@/component/home/NewProgramsDetail";
 import React, { useEffect, useState } from "react";
-import { useRouter } from "next/router";
 import { getNewPrograms, getProgramsServiceById } from "@/services/api";
-import Image from "next/image";
+import { chooseCapmType, dateFunc, IMG_URL } from "@/constant";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { Table } from "reactstrap";
 
 export default function ProgramId(props) {
   const { data } = props;
 
-  console.log("data", data);
+ 
 
   return (
     <>
-      <Image
-        src="/profile.png"
-        width={500}
-        height={500}
-        alt="Picture of the author"
+     <div className="d-flex justify-content-center flex-column align-items-center h-100   my-2" >
+     
+     <div style={{width:'80%'}} className="my-5">
+     {data.map((item, key) => (
+      <img
+         src={`${IMG_URL}${item.ImgUrl}`}
+         className="d-block w-100"
+         style={{ height: "500px" ,width: "100%" }}
       />
+      ))}
+     </div>
+     
+      
 
-      <div className="table-responsive">
-        <table className="table align-middle table-nowrap mb-0">
+     
+      <table class="table table-light table-bordered " responsive style={{width:'80%'}} >
           <thead>
             <tr>
-              <th scope="col"> سفر</th>
+              <th scope="col" > سفر</th>
               <th scope="col">نوع اقامت</th>
               <th scope="col">قیمت</th>
               <th scope="col">درجه سختی</th>
               <th scope="col">طول مسیر</th>
               <th scope="col">تاریخ سفر</th>
+              
             </tr>
           </thead>
 
           <tbody>
             {data.map((item, key) => (
               <tr key={key}>
-                <td>
-                  <h5 className="text-muted m-5">{item.Title}</h5>
+                
+                <td >
+                  {item.Title}
                 </td>
                 <td>
-                  <h5 className="text-muted m-5">{item.CampType}</h5>
+                 {chooseCapmType(item.CampType)}
                 </td>
                 <td>
-                  <h5 className="text-muted m-5">{item.Price}</h5>
+                 {item.Price}
                 </td>
                 <td>
-                  <h5 className="text-muted m-5">{item.Distance}</h5>
+                  {item.Degree}
+                </td>
+                <td>
+                  {item.Distance}
+                </td>
+                <td>
+                {dateFunc(
+                    item.StartDateYear,
+                    item.StartDateMonth,
+                    item.StartDateDay
+                  )}
                 </td>
               </tr>
             ))}
           </tbody>
         </table>
-      </div>
+
+        {data.map((item, key) => (
+     <div class="text-center my-5">{item.Body}</div>
+      ))}
+        
+        </div>
     </>
   );
 }
 
 export async function getStaticProps(context) {
   const { params } = context;
-  console.log("param", params);
+  
   const res = await getProgramsServiceById(params.id);
   const data = res.data;
 
@@ -71,14 +95,10 @@ export async function getStaticProps(context) {
 export async function getStaticPaths() {
   const res = await getNewPrograms();
   const data = res.data;
-
-  // Get the paths we want to pre-render based on posts
   const paths = data.map((item) => ({
     params: { id: item.id.toString() },
   }));
 
-  // We'll pre-render only these paths at build time.
-  // { fallback: false } means other routes should 404.
   return { paths, fallback: false };
 }
 
