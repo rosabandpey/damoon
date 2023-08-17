@@ -9,7 +9,7 @@ export default function CustomModal(props) {
     
       {props.open && (
         <Modal isOpen={props.open} toggle={props.modalToggle}   size={props.size || "xl"}>
-          <ModalHeader >Modal title</ModalHeader>
+          <ModalHeader >{props.modalTile}</ModalHeader>
           <ModalBody>
           {props.children}
         </ModalBody>

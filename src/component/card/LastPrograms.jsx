@@ -21,7 +21,7 @@ export default function LastPrograms(props) {
             title={item.title}
             description={item.description}
             buttonTitle={"مشاهده"}
-            imgUrl={`http://84.241.11.4:6060/uploads/programs/${item.startDateYear+'-'+convertDate(item.startDateMonth)+'-'+item.startDateDay+'/001.jpg'}`}
+            imgUrl={`http://192.168.188.46/uploads/programs/${item.startDateYear+'-'+convertDate(item.startDateMonth)+'-'+item.startDateDay+'/001.jpg'}`}
             className="my-2"
             key={item.id}
 

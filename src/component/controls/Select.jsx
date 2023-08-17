@@ -26,7 +26,7 @@ export default function Select({
             <select
               // defaultValue={defaultValue}
               selected={value}
-             
+              style={{fontFamily: 'iranSans'}}
               className="form-control"
               name={name}
               onChange={onChange}
@@ -34,9 +34,10 @@ export default function Select({
               placeholder={title}
               disabled={disabled}
             >
-               <option>انتخاب</option>
+               <option style={{fontFamily: 'iranSans'}}>انتخاب</option>
               {options.map((item) => (
-                <option key={item.id} value={item.id}>{item.title}</option>
+                
+                <option key={item.id} value={item.id}   style={{fontFamily: 'iranSans'}}>{item.title}</option>
               ))}
             </select>
           )}

@@ -11,9 +11,9 @@ import RegisterForm from "../home/RegisterForm";
 export default function Header(props) {
   const [menuCat, setMenuCat] = useState(null);
   const [navOpened, setNavOpened] = useState(false);
-  const [open, setOpen] = useState(false);
+  const [openRegisterPage, setOpenRegisterPage] = useState(false);
 
-  const handleClose = () => setOpen(false);
+  const handleClose = () => setOpenRegisterPage(false);
   useEffect(() => {
     // add when mounted
     document.addEventListener("click", closeMenu); // return function to be called when unmounted
@@ -47,7 +47,7 @@ export default function Header(props) {
   };
 
   const handleRegister = () => {
-    setOpen(!open);
+    setOpenRegisterPage(!openRegisterPage);
   };
 
   return (
@@ -104,8 +104,8 @@ export default function Header(props) {
         </section>
       </header>
 
-      {open && (
-        <CustomModal open={open} modalToggle={handleClose}>
+      {openRegisterPage && (
+        <CustomModal open={openRegisterPage} modalToggle={handleClose} modalTile="ثبت نام کاربر">
           <RegisterForm handleClose={handleClose} />
         </CustomModal>
       )}

@@ -3,6 +3,7 @@ import { Controller } from "react-hook-form";
 
 export default function Input({
   name,
+  value,
   errors,
   control,
   defaultValue,
@@ -12,17 +13,20 @@ export default function Input({
   disabled,
   labalClassName,
   placeholder,
+  rows,
 }) {
   return (
     <div>
       <label className={labalClassName || "form-label"}>{title}</label>
       <Controller
         name={name}
+        value={value}
         control={control}
-        defaultValue={defaultValue || ""}
+        defaultValue={defaultValue === 0 ? 0 : defaultValue || ""}
         render={({ field }) => (
           <input
-            className={className}
+            rows={rows}
+            className= "form-control"
             disabled={disabled}
             {...field}
             label={title}
