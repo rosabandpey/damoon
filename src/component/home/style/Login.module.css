@@ -12,13 +12,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: 20px !important;
   border-radius: 30px;
-  width: 25%;
-  height: 450px;
-  margin: auto;
-  background-color: #EFEFEF;
-  padding: 30px;
 }
 
 .formButton {

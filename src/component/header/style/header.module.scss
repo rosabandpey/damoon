@@ -2,7 +2,7 @@
 $grayColor: #DEDEDE;
 $infoColor: #189833;
 $dangerColor: #e24b00ed ;
-$successColor: #23C197;
+$successColor: #2fb18e;
 .text_info {
     color: $infoColor !important;
 }
@@ -13,7 +13,10 @@ $successColor: #23C197;
 .btn_pill {
     border-radius: 100px;
   }
-
+  .btn_login{
+      margin-right: 10px !important;
+      background-color: $successColor !important;
+  }
   a.btn {
     line-height: 36px;
     display: inline-block;

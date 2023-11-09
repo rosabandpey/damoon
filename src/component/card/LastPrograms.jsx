@@ -4,6 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import styles from "./Card.module.scss";
 import { CardTitle, NavLink } from "reactstrap";
 import convertDate from "@/util/common";
+import { IMG_URL } from "@/constant";
 
 export default function LastPrograms(props) {
   const data = props?.lastPrograms;
@@ -18,21 +19,35 @@ export default function LastPrograms(props) {
       <div className={styles.divCardItem}>
         {(data || []).map((item) => (
           <CardItem
+            isUrban={props.isUrban}
+            id={item.id}
             title={item.title}
             description={item.description}
             buttonTitle={"مشاهده"}
-            imgUrl={`http://192.168.188.46/uploads/programs/${item.startDateYear+'-'+convertDate(item.startDateMonth)+'-'+item.startDateDay+'/001.jpg'}`}
+            imgUrl={`${IMG_URL}/${
+              item.startDateYear +
+              "-" +
+              convertDate(item.startDateMonth) +
+              "-" +
+              item.startDateDay +
+              "/001.jpg"
+            }`}
             className="my-2"
             key={item.id}
-
-            date={`${item.startDateYear+'-'+convertDate(item.startDateMonth)+'-'+item.startDateDay}`}
-
+            date={`${
+              item.startDateYear +
+              "-" +
+              convertDate(item.startDateMonth) +
+              "-" +
+              item.startDateDay
+            }`}
           />
         ))}
       </div>
-      
-          <a href="/user/3" className={styles.link}>{props.linkTitle}</a>
-       
+
+      <a href="/user/3" className={styles.link}>
+        {props.linkTitle}
+      </a>
     </div>
   );
 }

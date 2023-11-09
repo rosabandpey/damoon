@@ -11,6 +11,11 @@
   border-radius: 100px;
 }
 
+.btn_login {
+  margin-right: 10px !important;
+  background-color: #2fb18e !important;
+}
+
 a.btn {
   line-height: 36px;
   display: inline-block;

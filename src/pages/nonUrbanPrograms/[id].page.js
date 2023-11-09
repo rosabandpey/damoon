@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { getNewPrograms, getProgramsServiceById } from "@/services/api";
+import { getLastProgramsService, getNewPrograms, getProgramsServiceById } from "@/services/api";
 import { chooseCapmType, dateFunc, IMG_URL } from "@/constant";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Table } from "reactstrap";
@@ -81,7 +81,7 @@ export async function getStaticProps(context) {
 }
 
 export async function getStaticPaths() {
-  const res = await getNewPrograms();
+  const res = await getLastProgramsService(2);
   const data = res.data;
   const paths = data.map((item) => ({
     params: { id: item.id.toString() },

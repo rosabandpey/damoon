@@ -6,14 +6,19 @@ import Image from "next/image";
 import Link from "next/link";
 import CustomModal from "../modal/CustomModal";
 import RegisterForm from "../home/RegisterForm";
+import Login from '../home/Login'
 
 
 export default function Header(props) {
   const [menuCat, setMenuCat] = useState(null);
   const [navOpened, setNavOpened] = useState(false);
   const [openRegisterPage, setOpenRegisterPage] = useState(false);
+  const [openLoginPage, setOpenLoginPage] = useState(false);
 
-  const handleClose = () => setOpenRegisterPage(false);
+
+  const handleCloseRegister = () => setOpenRegisterPage(false);
+
+  const handleCloseLogin = () => setOpenLoginPage(false);
   useEffect(() => {
     // add when mounted
     document.addEventListener("click", closeMenu); // return function to be called when unmounted
@@ -49,6 +54,11 @@ export default function Header(props) {
   const handleRegister = () => {
     setOpenRegisterPage(!openRegisterPage);
   };
+
+  const handleLogin = () => {
+    setOpenLoginPage(!openLoginPage);
+  };
+  
 
   return (
     <>
@@ -98,6 +108,18 @@ export default function Header(props) {
               >
                 ثبت نام
               </a>
+
+              <a
+                className={[
+                  styles.btn,
+                  styles.btn_pill,
+                  styles.btn_danger,
+                  styles.btn_login,
+                ].join(" ")}
+                onClick={handleLogin}
+              >
+                ورود
+              </a>
               <span className={styles.toggle_btn} onClick={toggleNav}></span>
             </div>
           </nav>
@@ -105,8 +127,15 @@ export default function Header(props) {
       </header>
 
       {openRegisterPage && (
-        <CustomModal open={openRegisterPage} modalToggle={handleClose} modalTile="ثبت نام کاربر">
-          <RegisterForm handleClose={handleClose} />
+        <CustomModal open={openRegisterPage} modalToggle={handleCloseRegister} modalTile="ثبت نام کاربر">
+          <RegisterForm handleClose={handleCloseRegister} />
+        </CustomModal>
+      )}
+
+      
+{openLoginPage && (
+        <CustomModal open={openLoginPage} modalToggle={handleCloseLogin} modalTile="ورود" size='sm'>
+          <Login handleClose={handleCloseLogin} />
         </CustomModal>
       )}
     </>

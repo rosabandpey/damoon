@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const BASE_URL = "http://192.168.188.46:6060/api";
+const BASE_URL = "http://84.241.11.4:6060/api";
 
 const request = axios.create({
   baseURL: BASE_URL,
@@ -29,6 +29,9 @@ export const getListCityService = (provinceId) =>
   export const getProgramsServiceById = (id) =>
   request.get(`/Programs/${id}`);
  
+
+  export const getProgramsGetLastByProgramType = (ProgramType) =>
+  request.get(`/Programs/GetLast/${ProgramType}`);
 
 export const setBranchFilesService = (data) =>
   request.post("/BranchFiles/Create", data, {

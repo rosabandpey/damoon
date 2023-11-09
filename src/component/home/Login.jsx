@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import user from "../../../assets/img/user.png";
 import Image from "next/image";
@@ -9,8 +8,7 @@ import * as yup from "yup";
 import { Button, Card, Col, Form, Label, Row } from "reactstrap";
 import Input from "../controls/Input";
 
-
-export default function Login (){
+export default function Login() {
   const [alert, setAlert] = useState(false);
   const [checkAlert, setCheckAlert] = useState(false);
   const [labelAlert, setLabelAlert] = useState("");
@@ -18,7 +16,7 @@ export default function Login (){
 
   const schema = yup
     .object({
-      password: yup.string().required("لطفا پسورد را وارد کنید"),
+     
       username: yup.string().required("لطفا نام کاربری را وارد کنید"),
     })
     .required();
@@ -44,72 +42,44 @@ export default function Login (){
   };
 
   const inputListGeneratorArray = [
-    { title: "نام کاربری", name: "username" },
-    {
-      title: "کلمه عبور",
-      name: "password",
-    },
+    { title: "موبایل", name: "username" },
+    
   ];
 
-  return(
-
+  return (
     <>
+      <div className={styles.container}>
+        <Image src={user} alt="user" className={styles.cardImg} />
 
     
-    <div className={styles.container}>
 
-    <Image
-                    src={user}
-                    alt='user'
-                    className={styles.cardImg}
-                />
+        {inputListGeneratorArray.map((itm, idx) => {
+          return (
+            <>
+              <Input
+                control={control}
+                title={itm.title}
+                name={itm.name}
+                errors={errors[itm.name]}
+              />
+            </>
+          );
+        })}
 
-                
-        <Label id="modal-modal-title" variant="h6" component="h2"  sx={{
-            mb: 1,
-            fontFamily: "IRANSans",
-            color: "#3F4756",
-            fontSize:23
-          }}>
-     ورود 
-    </Label>
-   
-     
-      
-          
-            {inputListGeneratorArray.map((itm, idx) => {
-                return (
-                  <>
-                  
-                      <Input
-                        control={control}
-                        label={itm.title}
-                        name={itm.name}
-                        errors={errors[itm.name]}
-                      />
-                  
-                  </>
-                );
-              })}
+        <div className={"mt-4 d-flex justify-content-start"}>
+          <Button
+            type="submit"
+            color="primary"
+            onClick={handleSubmit(formHandleSubmit)}
+          >
+            ورود
+          </Button>
+        </div>
 
-              <Row>
-                <Col className={"mt-4 d-flex justify-content-end"}>
-                  <Button type="submit" color="primary"  onClick={handleSubmit(formHandleSubmit)}>
-                    ورود
-                  </Button>
-                </Col>
-              </Row>
-
-              <a  className={styles.aButton} href="#">
-  فراموشی رمز عبور
-      </a>
-          
-         
-     
- </div>
-  </>
-
-  
-  )
-
+        <a className={styles.aButton} href="#">
+          فراموشی رمز عبور
+        </a>
+      </div>
+    </>
+  );
 }

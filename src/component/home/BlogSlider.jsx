@@ -18,29 +18,19 @@ export default function BlogSlider({ slideData }) {
     setIndex(selectedIndex);
   };
 
- 
-
   const chooseProgramType = (id) => {
     return PROGRAM_TYPE[id];
   };
 
- 
-
-  
-  const handleViewProgram=(id)=>{
-    console.log('test')
+  const handleViewProgram = (id) => {
+    console.log("test");
     // router.push('/program');
 
     router.push({
-      pathname: '/program/[id]',
+      pathname: "/program/[id]",
       query: { id: id },
     });
-   
-  }
-
- 
-
- 
+  };
 
   return (
     <Carousel
@@ -84,14 +74,17 @@ export default function BlogSlider({ slideData }) {
                 </div>
               ) : (
                 <div>
-                  <Button type="submit" className="btn btn-danger" onClick={()=>handleViewProgram(item.id)}>
+                  <Button
+                    type="submit"
+                    className="btn btn-danger"
+                    onClick={() => handleViewProgram(item.id)}
+                  >
                     شرایط برنامه
                   </Button>
                 </div>
               )}
             </div>
 
-       
             <p className={styles.des}>{item.description}</p>
             <div className={styles.propRow}>
               <div>
