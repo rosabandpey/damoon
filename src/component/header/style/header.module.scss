@@ -3,6 +3,15 @@ $grayColor: #DEDEDE;
 $infoColor: #189833;
 $dangerColor: #e24b00ed ;
 $successColor: #2fb18e;
+
+.logo_item {
+        
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        justify-content: center;
+    
+  }
 .text_info {
     color: $infoColor !important;
 }
@@ -36,7 +45,14 @@ $successColor: #2fb18e;
   }
 
 .header_wrapper {
+   
     min-height: 70px;
+
+    .mobile_header{
+        display: none ;
+    }
+
+
     .header_section {
         top: 0;
         left: 0;
@@ -47,7 +63,7 @@ $successColor: #2fb18e;
         position: fixed;
         min-height: inherit;
         background-color: #f2f2f2;
-        .container {
+        .desktop_header {
             display: flex;
             min-height: inherit;
             align-items: center;
@@ -55,6 +71,7 @@ $successColor: #2fb18e;
             margin-left: auto;
             margin-right: auto;
         }
+        
         box-shadow: 2px 2px 10px 0px rgba(112, 112, 112, 0.3);
     }
     .header_nav_list {
@@ -190,22 +207,45 @@ $successColor: #2fb18e;
 }
 
 @media(max-width: 700px) {
+  
     .header_wrapper {
         width: 100%;
+        .mobile_header{
+            display: flex ;
+        }
+        .header_section {
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 10;
+            overflow: auto;
+            max-height: 100vh;
+            position: fixed;
+            min-height: inherit;
+            background-color: #f2f2f2;
+            .desktop_header {
+                display: none;
+               
+            }
+           
+            box-shadow: 2px 2px 10px 0px rgba(112, 112, 112, 0.3);
+        }
+
         .header_nav_list {
             max-height: 70px;
-           
+           flex-direction: row;
             padding-top: 15px;
             overflow: hidden;
             transition: max-height 0.5s;
-            flex-direction: column;
-            align-items: flex-start;
+            
+            align-items: center;
             &.opened {
                  width: 100%;
                 max-height: 100vh;
             }
             .nav_item {
-                margin-left: 0;
+               
+                    margin-left: 15px;
                 margin-bottom: 16px;
             }
             .login_btn {

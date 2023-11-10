@@ -1,20 +1,21 @@
 import React, { useState, useEffect } from "react";
 import styles from "./style/header.module.scss";
 import { menuList } from "./constants";
-import logo from "../../../assets/img/Logo-96.png";
+import logo from "../../../assets/img/Logo-64.png";
+import avatar from "../../../assets/img/icons8-user-64.png";
 import Image from "next/image";
 import Link from "next/link";
 import CustomModal from "../modal/CustomModal";
 import RegisterForm from "../home/RegisterForm";
-import Login from '../home/Login'
-
+import Login from "../home/Login";
+import MobileHeader from "./mobileHeader";
+import { Nav, Navbar, NavDropdown } from "react-bootstrap";
 
 export default function Header(props) {
   const [menuCat, setMenuCat] = useState(null);
   const [navOpened, setNavOpened] = useState(false);
   const [openRegisterPage, setOpenRegisterPage] = useState(false);
   const [openLoginPage, setOpenLoginPage] = useState(false);
-
 
   const handleCloseRegister = () => setOpenRegisterPage(false);
 
@@ -58,13 +59,12 @@ export default function Header(props) {
   const handleLogin = () => {
     setOpenLoginPage(!openLoginPage);
   };
-  
 
   return (
     <>
-      <header className={styles.header_wrapper} onClick={dontClose}>
+      {/* <header className={styles.header_wrapper} onClick={dontClose}>
         <section className={styles.header_section}>
-          <nav className={styles.container}>
+          <nav className={styles.desktop_header}>
             <ul
               className={styles.header_nav_list + (navOpened ? "opened" : "")}
             >
@@ -124,17 +124,77 @@ export default function Header(props) {
             </div>
           </nav>
         </section>
-      </header>
+
+     
+       
+ 
+     
+    
+      </header> */}
+
+      <Navbar
+        collapseOnSelect
+        expand="lg"
+        bg="dark"
+        variant="dark"
+        className="d-flex flex-row justify-content-between"
+      >
+        <Navbar.Toggle aria-controls="responsive-navbar-nav " />
+        <Navbar.Collapse id="responsive-navbar-nav">
+          <Nav className="mr-auto">
+            <Nav.Link href="/">صفحه اصلی</Nav.Link>
+            <Nav.Link href="#pricing">مقالات آموزشی</Nav.Link>
+
+            <Nav.Link href="#pricing"> درباره ما</Nav.Link>
+            {/* <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
+         <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
+         <NavDropdown.Item href="#action/3.2">
+           Another action
+         </NavDropdown.Item>
+         <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+         <NavDropdown.Divider />
+         <NavDropdown.Item href="#action/3.4">
+           Separated link
+         </NavDropdown.Item>
+       </NavDropdown> */}
+          </Nav>
+        </Navbar.Collapse>
+        <Navbar.Brand href="/home" className={styles.logo_item}>
+          <Image
+            src={logo}
+            alt=""
+            width="64"
+            height="64"
+            className={styles.logo_item}
+          />
+        </Navbar.Brand>
+
+        <Image
+          src={avatar}
+          alt=""
+          width="64"
+          height="64"
+          className={styles.logo_item}
+        />
+      </Navbar>
 
       {openRegisterPage && (
-        <CustomModal open={openRegisterPage} modalToggle={handleCloseRegister} modalTile="ثبت نام کاربر">
+        <CustomModal
+          open={openRegisterPage}
+          modalToggle={handleCloseRegister}
+          modalTile="ثبت نام کاربر"
+        >
           <RegisterForm handleClose={handleCloseRegister} />
         </CustomModal>
       )}
 
-      
-{openLoginPage && (
-        <CustomModal open={openLoginPage} modalToggle={handleCloseLogin} modalTile="ورود" size='sm'>
+      {openLoginPage && (
+        <CustomModal
+          open={openLoginPage}
+          modalToggle={handleCloseLogin}
+          modalTile="ورود"
+          size="sm"
+        >
           <Login handleClose={handleCloseLogin} />
         </CustomModal>
       )}
