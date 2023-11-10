@@ -69,8 +69,8 @@ export default function HomePage({slideData}) {
   loading &&
 
   <div className={styles.flexRow}>
- <LastPrograms lastPrograms={lastUrbanPrograms} isUrban={true} title='برنامه های شهری اجرا شده' linkTitle='مشاهده کامل برنامه های شهری'/>
-  <LastPrograms lastPrograms={lastTripPrograms} isUrban={false} title='  سفرهای اجرا شده' linkTitle='مشاهده کامل سفرها' />
+ <LastPrograms lastPrograms={lastUrbanPrograms} isUrban={true} title='آخرین برنامه های شهری اجرا شده ' linkTitle='مشاهده کامل برنامه های شهری'/>
+  <LastPrograms lastPrograms={lastTripPrograms} isUrban={false} title='آخرین سفرهای اجرا شده' linkTitle='مشاهده کامل سفرها' />
  </div>
  
 }

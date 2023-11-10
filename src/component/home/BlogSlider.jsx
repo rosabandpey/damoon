@@ -19,6 +19,7 @@ export default function BlogSlider({ slideData }) {
   };
 
   const chooseProgramType = (id) => {
+   
     return PROGRAM_TYPE[id];
   };
 
@@ -31,6 +32,14 @@ export default function BlogSlider({ slideData }) {
       query: { id: id },
     });
   };
+
+  const getHours=(h)=>{
+    let min=h%100
+    let hour=(h-min)/100
+    console.log('hour',hour)
+    console.log('min',min)
+    return  min==0 ? hour : `${hour}:${min}`
+  }
 
   return (
     <Carousel
@@ -52,18 +61,17 @@ export default function BlogSlider({ slideData }) {
               <div>
                 <label className={styles.title}>{item.title}</label> -{" "}
                 <label>
-                  {dateFunc(
-                    item.startDateYear,
-                    item.startDateMonth,
-                    item.startDateDay
-                  )}{" "}
-                  الی{" "}
-                  {dateFunc(
-                    item.endDateYear,
-                    item.endDateMonth,
-                    item.endDateDay
-                  )}
-                  ( برنامه {chooseProgramType(item.programtype)} )
+                  {
+                    item.programType===1 ?  dateFunc(item.startDateYear,item.startDateMonth,item.startDateDay) +' - '+ `ساعت ${getHours(item.startHour)}`: 
+                    
+                    ((dateFunc(item.startDateYear,item.startDateMonth,item.startDateDay)==dateFunc(item.endDateYear,item.endDateMonth,item.endDateDay)) ? dateFunc(item.startDateYear,item.startDateMonth,item.startDateDay) :
+                      dateFunc(item.startDateYear,item.startDateMonth,item.startDateDay)+' '+ 'الی '+
+                   
+                    dateFunc(item.endDateYear,item.endDateMonth,item.endDateDay))
+}
+                  
+                  {' '}
+                  (برنامه {chooseProgramType(item.programType)})
                 </label>
               </div>
               {item.programtype == 2 ? (
@@ -91,13 +99,13 @@ export default function BlogSlider({ slideData }) {
                 <label>درجه سختی: {item.degree} از 10</label>
               </div>
               <div>
-                <label>هزینه برنامه: {item.price} تومان</label>
+                <label>هزینه برنامه: {item.programType===1 ? 'رایگان' : `${item.price.toLocaleString('fa-IR')} تومان`} </label>
               </div>
               <div>
                 <label> طول مسیر: {item.distance} کیلومتر</label>
               </div>
               <div>
-                <label> اقامت: {chooseCapmType(item.camptype)}</label>
+                <label>  { item.campType!=0 && `اقامت: ${chooseCapmType(item.campType)}` }</label>
                 {/* <Image
                   src={require(`../../../assets/img/camptype-${item.camptype}.png`)}
                   className="d-block w-100"

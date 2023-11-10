@@ -1,4 +1,4 @@
-export const IMG_URL="http://84.241.11.4:2080/uploads/programs/"
+export const IMG_URL="http://192.168.100.123:2080/uploads/programs/"
 
 export const dateFunc = (year, month, day) => {
     return `${year}/${month}/${day}`;

@@ -257,7 +257,10 @@ a.btn {
   max-width: 100%;
 }
 
-@media (max-width: 992px) {
+@media (max-width: 700px) {
+  .header_wrapper {
+    width: 100%;
+  }
   .header_wrapper .header_nav_list {
     max-height: 70px;
     padding-top: 15px;
@@ -273,6 +276,7 @@ a.btn {
             align-items: flex-start;
   }
   .header_wrapper .header_nav_list.opened {
+    width: 100%;
     max-height: 100vh;
   }
   .header_wrapper .header_nav_list .nav_item {

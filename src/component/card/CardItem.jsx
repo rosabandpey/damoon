@@ -45,7 +45,7 @@ export default function CardItem({
     <>
       <Card className={styles.flexRow}>
         <div className={styles.divImg}>
-          <CardImg alt={title}  src={`${IMG_URL}/${imgUrl}`} top className={styles.img} />
+          <CardImg alt={title}  src={imgUrl} top className={styles.img} />
         </div>
 
         <CardBody className={styles.CardBody}>

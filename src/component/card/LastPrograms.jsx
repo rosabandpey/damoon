@@ -29,7 +29,7 @@ export default function LastPrograms(props) {
               "-" +
               convertDate(item.startDateMonth) +
               "-" +
-              item.startDateDay +
+              convertDate(item.startDateDay) +
               "/001.jpg"
             }`}
             className="my-2"

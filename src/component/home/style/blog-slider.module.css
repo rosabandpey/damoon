@@ -1,6 +1,6 @@
 .blog_slider_section {
   padding: 30px 0;
-  background-color: #EFEFEF;
+  background-color: #efefef;
   border-radius: 30px;
   width: 70%;
   height: 450px;
@@ -40,7 +40,8 @@
   border-radius: 20px;
   color: black;
   padding: 20px;
-  opacity: 0.7;
+  opacity: 0.9;
+  margin-bottom: 10px;
 }
 
 .title {
@@ -66,7 +67,7 @@
   border-radius: 20px;
   color: black;
   padding: 20px;
-  opacity: 0.7;
+  opacity: 0.9;
   margin-bottom: 10px;
 }
 
@@ -83,11 +84,11 @@
           justify-content: space-between;
   -webkit-box-shadow: black 1px 1px;
           box-shadow: black 1px 1px;
-  background-color: #a3a3a3;
+  background-color: #f9f8f8;
   border-radius: 20px;
   color: black;
   padding: 20px;
-  opacity: 0.8;
+  opacity: 0.9;
   margin-bottom: 10px;
 }
 /*# sourceMappingURL=blog-slider.module.css.map */
