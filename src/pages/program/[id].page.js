@@ -2,25 +2,25 @@ import React, { useEffect, useState } from "react";
 import { getNewPrograms, getProgramsServiceById } from "@/services/api";
 import { chooseCapmType, dateFunc, IMG_URL } from "@/constant";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Table } from "reactstrap";
-
+import styles from './style/[id].module.scss'
 export default function ProgramId(props) {
   const { data } = props;
 
-console.log('data',data)
+  console.log("data", data);
   return (
     <>
-      <div className="d-flex justify-content-center flex-column align-items-center h-100   my-2">
-        <div style={{ width: "80%" }} className="my-5">
-          {data && data.map((item, key) => (
-            <div key={key}>
-              <img
-                src={`${IMG_URL}${item.imgUrl}`}
-                className="d-block w-100"
-                style={{ height: "500px", width: "100%" }}
-              />
-            </div>
-          ))}
+      <div className="d-flex justify-content-center flex-column align-items-center h-100  mt-3 ">
+        <div style={{ width: "80%" }} className="">
+          {data &&
+            data.map((item, key) => (
+              <div key={key}>
+                <img
+                  src={`${IMG_URL}${item.imgUrl}`}
+                  className="d-block w-100"
+                  style={{ height: "500px", width: "100%" }}
+                />
+              </div>
+            ))}
         </div>
 
         <table
@@ -28,34 +28,53 @@ console.log('data',data)
           responsive
           style={{ width: "80%" }}
         >
-          <thead>
-            <tr>
-              <th scope="col"> سفر</th>
-              <th scope="col">نوع اقامت</th>
-              <th scope="col">قیمت</th>
-              <th scope="col">درجه سختی</th>
-              <th scope="col">طول مسیر</th>
-              <th scope="col">تاریخ سفر</th>
-            </tr>
-          </thead>
+        
 
           <tbody>
-            {data && data.map((item, key) => (
-              <tr key={key}>
-                <td>{item.title}</td>
-                <td>{chooseCapmType(item.campType)}</td>
-                <td>{item.price}</td>
-                <td>{item.degree}</td>
-                <td>{item.distance}</td>
-                <td>
-                  {dateFunc(
-                    item.startDateYear,
-                    item.startDateMonth,
-                    item.startDateDay
-                  )}
-                </td>
-              </tr>
-            ))}
+            {data &&
+              data.map((item, key) => (
+                <>
+                  <tr key={key}>
+                    <th scope="col">تاریخ سفر</th>
+                    <td>
+                      {dateFunc(
+                        item.startDateYear,
+                        item.startDateMonth,
+                        item.startDateDay
+                      )}
+                    </td>
+                    <th scope="col">درجه سختی</th>
+                    <td>{item.degree}</td>
+                  </tr>
+                  <tr>
+
+                 
+                  <th scope="col">هزینه</th>
+                  <td>{item.price.toLocaleString('fa-IR')}</td>
+                  <th scope="col">طول مسیر</th>
+                  <td>{item.distance}</td>
+                  </tr>
+                  <tr>
+                    {item.campType!=0 ? 
+                    <>
+                    <th scope="col">نوع اقامت</th>
+                    <td>{chooseCapmType(item.campType)}</td> 
+                    <th></th>
+                    </>    
+                    : null
+
+                    }
+                   
+                   
+                   
+                  </tr>
+                  <tr className={styles.trJoinProgram}>
+                  <td className={styles.tdJoinProgram}>
+                    <button type="button" class="btn btn-primary">شرایط شرکت</button>
+                    </td>
+                  </tr>
+                </>
+              ))}
           </tbody>
         </table>
 
@@ -69,7 +88,7 @@ console.log('data',data)
 
 export async function getStaticProps(context) {
   const { params } = context;
-  console.log('context',context)
+  console.log("context", context);
   const res = await getProgramsServiceById(params.id);
   const data = res.data;
 
