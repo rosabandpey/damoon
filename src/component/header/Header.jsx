@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import styles from "./style/header.module.scss";
 import { menuList } from "./constants";
-import logo from "../../../assets/img/Logo-64.png";
-import avatar from "../../../assets/img/icons8-user-64.png";
+import logo from "../../../assets/img/Logo-96.png";
+import avatar from "../../../assets/img/upUser.png";
 import Image from "next/image";
 import Link from "next/link";
 import CustomModal from "../modal/CustomModal";
@@ -62,7 +62,7 @@ export default function Header(props) {
 
   return (
     <>
-      {/* <header className={styles.header_wrapper} onClick={dontClose}>
+      <header className={styles.header_wrapper} onClick={dontClose}>
         <section className={styles.header_section}>
           <nav className={styles.desktop_header}>
             <ul
@@ -124,29 +124,23 @@ export default function Header(props) {
             </div>
           </nav>
         </section>
+      </header>
+      <div className={styles.mobile_header}>
+        <Navbar
+          collapseOnSelect
+          expand="lg"
+          bg="dark"
+          variant="dark"
+          className="d-flex flex-row justify-content-between w-100"
+        >
+          <Navbar.Toggle aria-controls="responsive-navbar-nav " />
+          <Navbar.Collapse id="responsive-navbar-nav">
+            <Nav className="mr-auto">
+              <Nav.Link href="/">صفحه اصلی</Nav.Link>
+              <Nav.Link href="#pricing">مقالات آموزشی</Nav.Link>
 
-     
-       
- 
-     
-    
-      </header> */}
-
-      <Navbar
-        collapseOnSelect
-        expand="lg"
-        bg="dark"
-        variant="dark"
-        className="d-flex flex-row justify-content-between"
-      >
-        <Navbar.Toggle aria-controls="responsive-navbar-nav " />
-        <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="mr-auto">
-            <Nav.Link href="/">صفحه اصلی</Nav.Link>
-            <Nav.Link href="#pricing">مقالات آموزشی</Nav.Link>
-
-            <Nav.Link href="#pricing"> درباره ما</Nav.Link>
-            {/* <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
+              <Nav.Link href="#pricing"> درباره ما</Nav.Link>
+              {/* <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
          <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
          <NavDropdown.Item href="#action/3.2">
            Another action
@@ -157,26 +151,27 @@ export default function Header(props) {
            Separated link
          </NavDropdown.Item>
        </NavDropdown> */}
-          </Nav>
-        </Navbar.Collapse>
-        <Navbar.Brand href="/home" className={styles.logo_item}>
+            </Nav>
+          </Navbar.Collapse>
+          <Navbar.Brand href="/home" className={styles.logo_item}>
+            <Image
+              src={logo}
+              alt=""
+              width="64"
+              height="64"
+              className={styles.logo_item}
+            />
+          </Navbar.Brand>
+
           <Image
-            src={logo}
+            src={avatar}
             alt=""
-            width="64"
-            height="64"
+            width="30"
+            height="30"
             className={styles.logo_item}
           />
-        </Navbar.Brand>
-
-        <Image
-          src={avatar}
-          alt=""
-          width="64"
-          height="64"
-          className={styles.logo_item}
-        />
-      </Navbar>
+        </Navbar>
+      </div>
 
       {openRegisterPage && (
         <CustomModal
